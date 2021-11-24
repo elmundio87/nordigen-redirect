@@ -9,6 +9,11 @@
   </head>
   <body>
     Hello world
-	<script src="index.js"></script>
+    <script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const ref = urlParams.get('ref');
+    	window.location.replace("shortcuts://run-shortcut?name=Nordigen%20-%20Update%20Requisition%20ID&input=text&text=" + ref);
+    </script>
   </body>
 </html>
